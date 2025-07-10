@@ -8,117 +8,180 @@
             font-family: Arial, sans-serif;
             margin: 0;
         }
-        .menu-table {
+        .menu {
             background-color: #333;
             color: white;
-            width: 100%;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 30px;
         }
-        .menu-table td a {
-            display: inline-block;
+        .menu a {
             color: white;
-            padding: 15px 20px;
             text-decoration: none;
+            margin: 0 10px;
         }
-        .menu-table td a:hover {
+        .menu a:hover {
             background-color: #555;
+            padding: 5px 10px;
         }
-        .section-table {
-            width: 100%;
-            margin: 20px 0;
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+        }
+        .header-text {
+            max-width: 60%;
+        }
+        .header-text h1 {
+            margin: 0;
+        }
+        .button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .header-section img {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: contain;
+        }
+        .biodata {
+            text-align: center;
+            padding: 30px;
+        }
+        .biodata-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            justify-content: center;
+            justify-items: center;
+        }
+        @media (max-width: 900px) {
+            .biodata-boxes {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .biodata-boxes {
+                grid-template-columns: 1fr;
+            }
         }
         .biodata-box {
             border: 1px solid #ccc;
             padding: 15px;
-            text-align: center;
-            height: 100px;
             font-weight: bold;
-        }
-        .portfolio-table {
             width: 100%;
-            border-collapse: collapse;
-        }
-        .portfolio-table th, .portfolio-table td {
-            border: 1px solid #aaa;
-            padding: 10px;
+            max-width: 300px;
+            box-sizing: border-box;
             text-align: center;
         }
-        img {
-            max-width: 150px;
-            border-radius: 8px;
+        .portfolio {
+            padding: 30px;
+            text-align: center;
+        }
+        .portfolio-items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center;
+            justify-items: center;
+        }
+        @media (max-width: 900px) {
+            .portfolio-items {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .portfolio-items {
+                grid-template-columns: 1fr;
+            }
+        }
+        .portfolio-item {
+            border: 1px solid #aaa;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            max-width: 300px;
+            box-sizing: border-box;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+        }
+        .biru {
+            color: blue;
         }
     </style>
 </head>
 <body>
 
 <!-- Section 1: Menu -->
-<table class="menu-table">
-    <tr>
-        <td><a href="#">Brand</a></td>
-        <td><a href="#">Header</a></td>
-        <td><a href="#">Biodata</a></td>
-        <td><a href="#">Portofolio</a></td>
-    </tr>
-</table>
+<div class="menu">
+    <div><a href="#">Brand</a></div>
+    <div>
+        <a href="#">Header</a>
+        <a href="#">Biodata</a>
+        <a href="#">Portofolio</a>
+    </div>
+</div>
 
 <!-- Section 2: Judul & Gambar -->
-<table class="section-table">
-    <tr>
-        <td style="width: 70%; font-size: 12px; font-weight: bold;">
-            <h1>Selamat Datang di Website Saya</h1> 
-            <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini</p>
-            <button>Pelajari lebih lanjut</button>
-        </td>
-        <td style="text-align: right;">
-            <img src="https://via.placeholder.com/150" alt="Foto Profil">
-        </td>
-    </tr>
-</table>
+<div class="header-section">
+    <div class="header-text">
+        <h1>Selamat Datang di Website Saya</h1>
+        <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini</p>
+        <button class="button">Pelajari lebih lanjut</button>
+    </div>
+    <div>
+        <img src="profile picture.jpg" alt="Foto Profil">
+    </div>
+</div>
 
-<!-- Section 3: Biodata (6 box) -->
-<table class="section-table">
-    <tr>
-        <td colspan="4" align="center"><h2>About Me</h2>
-        <p>a brief of introduction about myself</p></td>
-    </tr>
-    <tr>   
-        <td class="biodata-box">Full Name</td>
-        <td class="biodata-box">Education</td>
-        <td class="biodata-box">Pekerjaan</td>
-    </tr>
-    <tr>
-        <td class="biodata-box">Contact</td>
-        <td class="biodata-box">Hobi</td>
-        <td class="biodata-box">Alamat</td>
-    </tr>
-</table>
+<!-- Section 3: Biodata -->
+<div class="biodata">
+    <h2 class="biru">About Me</h2>
+    <p>a brief of introduction about myself</p>
+    <div class="biodata-boxes">
+        <div class="biodata-box"><span class="biru">Full Name:</span> Rohim</div>
+        <div class="biodata-box"><span class="biru">Education:</span> S1 Ekonomi</div>
+        <div class="biodata-box"><span class="biru">Pekerjaan:</span> Influencer</div>
+        <div class="biodata-box"><span class="biru">Contact:</span> Ohim@email.com</div>
+        <div class="biodata-box"><span class="biru">Hobi:</span> Facebook</div>
+        <div class="biodata-box"><span class="biru">Alamat:</span> Jakarta</div>
+    </div>
+</div>
 
 <!-- Section 4: Portofolio -->
-<table class="portfolio-table" border="5" width="100%" id="section4">
-    <tr>
-        <th colspan="2">Portofolio</th>
-    </tr>
-    <tr>
-        <td class="biodata-box" align="center" valign="top">
-            <img src="https://via.placeholder.com/200" alt="Foto placeholder">
+<div class="portfolio">
+    <h2 class="biru">Portofolio</h2>
+    <div class="portfolio-items">
+        <div class="portfolio-item">
+            <img src="7.png" alt="Foto placeholder">
             <h3>Proyek 1</h3>
-             <p>Deskripsi Proyek 1.</p></td>
-        <td class="biodata-box" align="center" valign="top">
-            <img src="https://via.placeholder.com/200" alt="Foto placeholder">
+            <p>Deskripsi Proyek 1.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="8.png" alt="Foto placeholder">
             <h3>Proyek 2</h3>
-             <p>Deskripsi Proyek 2.</p></td>
-    </tr>
-    <tr>
-        <td class="biodata-box" align="center" valign="top">
-            <img src="https://via.placeholder.com/200" alt="Foto placeholder">
+            <p>Deskripsi Proyek 2.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="9.png" alt="Foto placeholder">
             <h3>Proyek 3</h3>
-             <p>Deskripsi Proyek 3.</p></td>
-        <td class="biodata-box" align="center" valign="top">
-            <img src="https://via.placeholder.com/200" alt="Foto placeholder">
+            <p>Deskripsi Proyek 3.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="10.png" alt="Foto placeholder">
             <h3>Proyek 4</h3>
-             <p>Deskripsi Proyek 4.</p></td>
-    </tr>
-</table>
+            <p>Deskripsi Proyek 4.</p>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
