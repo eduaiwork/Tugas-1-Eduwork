@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Profil Saya</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
         }
         .menu {
-            background-color: #333;
+            background-color: blue;
             color: white;
             display: flex;
             justify-content: space-between;
@@ -122,8 +123,9 @@
 
 <!-- Section 1: Menu -->
 <div class="menu">
-    <div><a href="#">Brand</a></div>
-    <div>
+    <div class="row">
+        <div class="col-sm"><a href="#">Brand</a></div></div>
+    <div class="countainer text-center">
         <a href="#">Header</a>
         <a href="#">Biodata</a>
         <a href="#">Portofolio</a>
@@ -135,7 +137,29 @@
     <div class="header-text">
         <h1>Selamat Datang di Website Saya</h1>
         <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini</p>
-        <button class="button">Pelajari lebih lanjut</button>
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Pelajari Lebih Lanjut
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Untuk Informasi Lebih Lanjut, silahkan hubungi email yang tertera</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Terima kasih telah mengunjungi website saya. Jika Anda memiliki pertanyaan atau ingin berkolaborasi, silakan hubungi saya melalui email
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Ok!</button>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
     <div>
         <img src="profile picture.jpg" alt="Foto Profil">
@@ -147,12 +171,12 @@
     <h2 class="biru">About Me</h2>
     <p>a brief of introduction about myself</p>
     <div class="biodata-boxes">
-        <div class="biodata-box"><span class="biru">Full Name:</span> Rohim</div>
-        <div class="biodata-box"><span class="biru">Education:</span> S1 Ekonomi</div>
-        <div class="biodata-box"><span class="biru">Pekerjaan:</span> Influencer</div>
-        <div class="biodata-box"><span class="biru">Contact:</span> Ohim@email.com</div>
-        <div class="biodata-box"><span class="biru">Hobi:</span> Facebook</div>
-        <div class="biodata-box"><span class="biru">Alamat:</span> Jakarta</div>
+        <div class="biodata-box"><span class="biru"><h2>Full Name</h2></span> Rohim</div>
+        <div class="biodata-box"><span class="biru"><h2>Education</h2></span> S1 Informatika</div>
+        <div class="biodata-box"><span class="biru"><h2>Pekerjaan</h2></span> Influencer</div>
+        <div class="biodata-box"><span class="biru"><h2>Contact</h2></span> Ohim@email.com</div>
+        <div class="biodata-box"><span class="biru"><h2>Hobi</h2></span> Facebook</div>
+        <div class="biodata-box"><span class="biru"><h2>Alamat</h2></span> Jakarta</div>
     </div>
 </div>
 
@@ -162,26 +186,26 @@
     <div class="portfolio-items">
         <div class="portfolio-item">
             <img src="7.png" alt="Foto placeholder">
-            <h3>Proyek 1</h3>
+            <button type="button" class="btn btn-light">Proyek 1</button>
             <p>Deskripsi Proyek 1.</p>
         </div>
         <div class="portfolio-item">
             <img src="8.png" alt="Foto placeholder">
-            <h3>Proyek 2</h3>
+            <button type="button" class="btn btn-light">Proyek 2</button>
             <p>Deskripsi Proyek 2.</p>
         </div>
         <div class="portfolio-item">
             <img src="9.png" alt="Foto placeholder">
-            <h3>Proyek 3</h3>
+            <button type="button" class="btn btn-light">Proyek 3</button>
             <p>Deskripsi Proyek 3.</p>
         </div>
         <div class="portfolio-item">
             <img src="10.png" alt="Foto placeholder">
-            <h3>Proyek 4</h3>
+            <button type="button" class="btn btn-light">Proyek 4</button>
             <p>Deskripsi Proyek 4.</p>
         </div>
     </div>
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
